@@ -1,5 +1,3 @@
-let mainBox = document.getElementById('mainBox').style
-
 let input = document.querySelectorAll('input')
 input.forEach(element => {
   element.addEventListener('input', () => {
@@ -20,14 +18,12 @@ function getUserInput() {
   userInputs.leftBottom = document.getElementById('leftBottomInput').value
   userInputs.rightTop = document.getElementById('rightTopInput').value
   userInputs.rightBottom = document.getElementById('rightBottomInput').value
-  console.log(userInputs)
 }
 
 function changeStyle() {
   let styledBox = document.getElementById('mainBox').style
-    styledBox.borderTopLeftRadius = userInputs.leftTop
-    styledBox.borderTopRightRadius = userInputs.rightTop
-    styledBox.borderBottomLeftRadius = userInputs.leftBottom
-    styledBox.borderBottomRightRadius = userInputs.rightBottom
-  console.log(styledBox.borderTopLeftRadius)
+  styledBox.borderTopLeftRadius = userInputs.leftTop + 'px'
+  styledBox.borderTopRightRadius = userInputs.rightTop + 'px'
+  styledBox.borderBottomLeftRadius = userInputs.leftBottom + 'px'
+  styledBox.borderBottomRightRadius = userInputs.rightBottom + 'px'
 }
